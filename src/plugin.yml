@@ -1,0 +1,14 @@
+name: AdvancedMutes
+author: MrOnlineCoder
+version: 1.0
+description: Advanced mutes for your server's chat. Special for MinecraftOnly
+main: com.mronlinecoder.advancedmutes.AdvancedMutes
+commands:
+  advmute:
+    description: Main AdvancedMutes command
+    permission: advancedmutes.mute
+  muteinfo:
+    description: Show info about player's mute
+  unmute:
+    description: Unmutes a player
+    permission: advancedmutes.unmute
