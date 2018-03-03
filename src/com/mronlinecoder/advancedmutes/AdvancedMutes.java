@@ -141,6 +141,11 @@ public class AdvancedMutes extends JavaPlugin implements Listener{
 			String target = args[0];
 			Player pl = getServer().getPlayer(target);
 			
+			if (target.equals(ipl.getName())) {
+				ipl.sendMessage(ChatColor.RED+"Вы не можете замутить самого себя!");
+				return false;
+			}
+			
 			if (pl == null) {
 				ipl.sendMessage(ChatColor.RED+"Указанный игрок не в сети!");
 				return false;
@@ -187,8 +192,15 @@ public class AdvancedMutes extends JavaPlugin implements Listener{
 				ipl.sendMessage(ChatColor.GOLD+"Использование: /unmute <игрок>");
 				return false;
 			}
+		
 			
 			String target = args[0];
+			
+			if (target.equals(ipl.getName())) {
+				ipl.sendMessage(ChatColor.RED+"Вы не можете размутить самого себя!");
+				return false;
+			}
+			
 			if (muted.get(target) == null) {
 				ipl.sendMessage(ChatColor.RED+"У этого игрока нет мута!");
 				return false;
